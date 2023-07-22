@@ -1,0 +1,27 @@
+a {
+    text-decoration: white;
+    color: white;
+}
+
+.swal2-modal .swal2-title {
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 500;
+    color: #000000;
+    font-weight: initial;
+    margin-bottom: 0;
+}
+
+.swal2-modal .swal2-icon,
+.swal2-modal .swal2-success-ring {
+    margin-top: 30px;
+    margin-bottom: 42px;
+}
+
+.table thead th,
+.jsgrid .jsgrid-table thead th {
+    border-top: 0;
+    border-bottom-width: 1px;
+    font-weight: 500;
+    color: #ffffff;
+}
