@@ -15,7 +15,7 @@ $row = mysqli_fetch_assoc($resultado);
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title text-center">Registro de Servicio </h4>
+                    <h4 class="card-title text-center">Editar Registro de Servicio </h4>
                     <br>
                     <form id="editServ<?php echo $row['id']; ?>" method="POST">
 
