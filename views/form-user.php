@@ -63,7 +63,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" id="register" name="registrar">Guardar</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"><a href="usuarios.php">Cancelar</a></button>
+                            <a href="usuarios.php" class="btn btn-danger" data-dismiss="modal">Cancelar</a>
 
                         </div>
 
