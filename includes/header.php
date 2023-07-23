@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../DataTables/css/dataTables.bootstrap4.min.css">
 
     <script src="../js/resp/jquery.min.js"></script>
-
+    <script src="../js/resp/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -137,6 +137,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                                 <h6 class="p-3 mb-0">Profile</h6>
+                                <!--
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
@@ -144,12 +145,13 @@
                                             <i class="mdi mdi-settings text-success"></i>
                                         </div>
                                     </div>
+                                  
                                     <div class="preview-item-content">
                                         <p class="preview-subject mb-1">Perfil</p>
-                                    </div>
+                                    </div>-->
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
+                                <a class="dropdown-item preview-item" data-toggle="modal" data-target="#logoutModal">
                                     <div class="preview-thumbnail">
                                         <div class="preview-icon bg-dark rounded-circle">
                                             <i class="mdi mdi-logout text-danger"></i>
@@ -167,3 +169,4 @@
                     </button>
                 </div>
             </nav>
+            <?php include "../views/salir.php"; ?>
