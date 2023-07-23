@@ -41,9 +41,11 @@
 
 
                                         <td>
-                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php echo $fila['id']; ?>">
-                                                <i class="mdi mdi-lead-pencil"></i>
-                                            </button>
+                                            <a class="btn btn-primary" href="change_password.php?id=<?php echo $fila['id'] ?> ">
+                                                <i class="mdi mdi-key-change"></i> </a>
+
+                                            <a class="btn btn-warning" href="editar_user.php?id=<?php echo $fila['id'] ?> ">
+                                                <i class="mdi mdi-lead-pencil"></i> </a>
 
                                             <a href="../includes/eliminar_user.php?id=<?php echo $fila['id'] ?> " class="btn btn-danger btn-del">
                                                 <i class="mdi mdi-delete"></i></a></button>
