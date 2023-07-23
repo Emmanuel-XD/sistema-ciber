@@ -46,7 +46,7 @@
 
                                         <td>
 
-                                            <a href="../includes/ticket?id=<?php echo $fila['id'] ?> " class="btn btn-secondary" target="_blank">
+                                            <a href="../includes/ticket.php?id=<?php echo $fila['id']; ?> " class="btn btn-secondary" target="_blank">
                                                 <i class="mdi mdi-cloud-print-outline"></i></a></button>
                                         </td>
                                     </tr>
