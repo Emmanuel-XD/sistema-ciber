@@ -17,6 +17,14 @@ if (isset($_POST['accion'])) {
         case 'editar_cliente':
             editar_cliente();
             break;
+
+        case 'editar_user':
+            editar_user();
+            break;
+
+        case 'editar_password':
+            editar_password();
+            break;
     }
 }
 function insertar_servicio()
@@ -95,6 +103,37 @@ function editar_cliente()
 
     $consulta = "UPDATE clientes SET nombre = '$nombre', apellido = '$apellido',domicilio = '$domicilio',fecha = '$fecha',
      monto = '$monto', id_servicio = '$id_servicio' WHERE id = '$id' ";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if ($resultado) {
+        echo json_encode("correcto");
+    } else {
+        echo json_encode("error");
+    }
+}
+
+function editar_user()
+{
+    require_once("db.php");
+    extract($_POST);
+
+    $consulta = "UPDATE usuarios SET usuario = '$usuario', correo = '$correo', telefono='$telefono' WHERE id = '$id' ";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if ($resultado) {
+        echo json_encode("correcto");
+    } else {
+        echo json_encode("error");
+    }
+}
+
+function editar_password()
+{
+    require_once("db.php");
+    extract($_POST);
+    $password = trim($_POST['password']);
+    $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 5]);
+    $consulta = "UPDATE usuarios SET password = '$password' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
