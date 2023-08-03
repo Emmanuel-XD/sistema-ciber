@@ -73,7 +73,7 @@ class PDF extends FPDF
 
         $this->Cell(55, 10, 'CLIENTE', 1, 0, 'C', 0);
         $this->Cell(72, 10, 'DIRECCION', 1, 0, 'C', 0);
-        $this->Cell(35, 10, 'SERVICIO', 1, 0, 'C', 0,);
+        $this->Cell(40, 10, 'SERVICIO', 1, 0, 'C', 0,);
         $this->Cell(20, 10, 'IMPORTE', 1, 1, 'C', 0);
     }
 
@@ -112,7 +112,7 @@ while ($row = $resultado->fetch_assoc()) {
 
     $pdf->Cell(55, 10,  $row['nombre'] . ' ' . $row['apellido'], 1, 0, 'L', 0);
     $pdf->Cell(72, 10, $row['domicilio'], 1, 0, 'L', 0);
-    $pdf->Cell(35, 10, $row['servicio'], 1, 0, 'L', 0);
+    $pdf->Cell(40, 10, $row['servicio'], 1, 0, 'L', 0);
     $pdf->Cell(20, 10, '$' . $row['pago'], 1, 1, 'L', 0);
 
     $pdf->SetFont('Arial', 'B', 15);
