@@ -107,7 +107,7 @@
                     'text': 'Usuario Registrado',
                     'icon': 'success',
                     'showConfirmButton': 'false',
-                    'color': '#000000',
+                    'color': '#ffffff',
 
                     'timer': '1500'
                 }).then(function() {
@@ -118,7 +118,7 @@
                 Swal.fire({
                     'title': 'Error',
                     'text': 'No se creo el usuario',
-                    'color': '#000000',
+                    'color': '#ffffff',
                     'icon': 'error'
                 })
             }
@@ -126,7 +126,7 @@
                 Swal.fire({
                     'title': 'Alerta',
                     'text': 'Este usuario ya esta registrado prueba con otro o inicia sesión',
-                    'color': '#000000',
+                    'color': '#ffffff',
                     'icon': 'info'
                 })
             }
@@ -134,7 +134,7 @@
                 Swal.fire({
                     'title': 'Alerta',
                     'text': 'Las contraseñas no coinciden',
-                    'color': '#000000',
+                    'color': '#ffffff',
                     'icon': 'info'
                 })
             }
