@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!$_SESSION['user']){
+    header('Location: ../index.php');
+    die();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,8 +55,8 @@
                                 <span class="count bg-success"></span>
                             </div>
                             <div class="profile-name">
-                                <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                                <span>Gold Member</span>
+                                <h5 class="mb-0 font-weight-normal"><?php echo $_SESSION['user']; ?></h5>
+                                <span>Usuario</span>
                             </div>
                         </div>
 
@@ -131,7 +139,7 @@
                             <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                                 <div class="navbar-profile">
                                     <img class="img-xs rounded-circle" src="../img/undraw_profile.svg" alt="">
-                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                                    <p class="mb-0 d-none d-sm-block navbar-profile-name"><?php echo $_SESSION['user']; ?>  </p>
                                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                                 </div>
                             </a>

@@ -1,9 +1,17 @@
+<?
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <!-- Required meta tags -->
+
     <meta charset="utf-8">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login | CiberNetic</title>
     <!-- plugins:css -->
@@ -32,15 +40,15 @@
                             <form>
                                 <div class="form-group">
                                     <label>Usuario *</label>
-                                    <input type="text" class="form-control p_input">
+                                    <input  id="username" type="text" class="form-control p_input">
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input type="text" class="form-control p_input">
+                                    <input id="password" type="password" class="form-control p_input">
                                 </div>
                                 <br>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-block enter-btn">Acceder</button>
+                                    <button type="submit" id="loginBtn" class="btn btn-primary btn-block enter-btn">Acceder</button>
                                 </div>
 
 
@@ -61,11 +69,8 @@
     <!-- Plugin js for this page -->
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="../../assets/js/off-canvas.js"></script>
-    <script src="../../assets/js/hoverable-collapse.js"></script>
-    <script src="../../assets/js/misc.js"></script>
-    <script src="../../assets/js/settings.js"></script>
-    <script src="../../assets/js/todolist.js"></script>
+    <script src="../../js/session.js"></script>
+
     <!-- endinject -->
 </body>
 

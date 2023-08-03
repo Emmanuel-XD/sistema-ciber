@@ -36,7 +36,7 @@
                         </table>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary"> PAGAR IMPORTE <i class="mdi mdi-square-inc-cash"></i> </button>
+                    <button type="submit" class="btn btn-primary" id="pagoImp"> PAGAR IMPORTE <i class="mdi mdi-square-inc-cash"></i> </button>
                 </div>
             </div>
         </div>
@@ -44,7 +44,6 @@
     </div>
 
     <?php include "../includes/footer.php"; ?>
-    <!-- Por alguna razon los script tienen que esta debajo del footer o del vendor.bundle.base.js no se que pex -->
     <script src="../js/jquery-ui.js"></script>
     <script src="../js/pagos.js"></script>
 

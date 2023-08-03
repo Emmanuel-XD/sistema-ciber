@@ -21,11 +21,42 @@ if (isset($_POST['accion'])) {
         case 'editar_user':
             editar_user();
             break;
-
         case 'editar_password':
             editar_password();
             break;
+        case 'saveReport':
+            saveReport();
+            break;
     }
+}
+function saveReport(){
+    extract($_POST);
+    include "db.php";
+    $currentDate = date('Y-m-d');
+
+    if($id_cli != "undefined" || $id_serv != "undefined") {
+    $consulta = "INSERT INTO historial (id_cliente, id_servicio, pago, fecha) VALUES ('$id_cli', '$id_serv', '$pago', '$currentDate')";
+    $resultado = mysqli_query($conexion, $consulta);
+    $id = $conexion->insert_id;
+    if ($resultado) {
+        $response = array(
+            'status' => 'success',
+            'reportId' => $id
+        );
+    } else {
+        $response = array(
+            'status' => 'error',
+            'message' => 'Ocurrió un error inesperado'
+        );
+}
+}
+else{
+    $response = array(
+        'status' => 'error',
+        'message' => 'Ocurrió un error inesperado'
+    );
+}
+echo json_encode($response);
 }
 function insertar_servicio()
 {

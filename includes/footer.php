@@ -24,9 +24,9 @@
 
 
     <script src="../js/dataTables.bootstrap4.min.js"></script>
- <script src="../package/dist/sweetalert2.all.js"></script>
- <script src="../package/dist/sweetalert2.all.min.js"></script>
-
+<!-- Include the Dark theme -->
+<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
  <!-- endinject -->
  <!-- Plugin js for this page -->
 
